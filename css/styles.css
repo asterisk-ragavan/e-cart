@@ -22,3 +22,37 @@ body div h1{
     margin-bottom:20px;
     padding:6px;
 }
+
+.list-group-item {
+    padding: 20px;
+    font-size: 1.1rem;
+}
+.item-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.item-quantity, .item-price {
+    font-size: 1.1rem;
+}
+.item-price {
+    text-align: center;
+}
+
+/* Styling for the total price section */
+.total {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745; /* Bootstrap success color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.total span {
+    color: #007bff; /* Highlighting the total price in Bootstrap primary color */
+}
+
+html {
+    height: 100%;
+    margin: 0; /* Remove default body margins */
+}
