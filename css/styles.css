@@ -52,7 +52,7 @@ body div h1{
     color: #007bff; /* Highlighting the total price in Bootstrap primary color */
 }
 
-html {
+html, body {
     height: 100%;
     margin: 0; /* Remove default body margins */
 }
