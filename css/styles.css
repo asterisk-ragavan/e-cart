@@ -1,0 +1,24 @@
+body{
+    background-color:#d0dfed;
+    margin:auto;
+}
+
+#done {
+    background-color:#d0edd1;
+}
+
+#error {
+    background-color:#edd0d0;
+}
+
+body div div div ul li {
+    border-radius:30px;
+    margin:5px;
+}
+
+body div h1{
+    background-color:#ffffff;
+    border-radius:30px;
+    margin-bottom:20px;
+    padding:6px;
+}

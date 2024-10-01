@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Item List</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        /* Additional spacing and formatting for list items */
+        .list-group-item {
+            padding: 20px;
+            font-size: 1.1rem;
+        }
+        .item-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .item-quantity, .item-price {
+            font-size: 1.1rem;
+        }
+        .item-price {
+            text-align: center;
+        }
+
+        /* Styling for the total price section */
+        .total {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745; /* Bootstrap success color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+        .total span {
+            color: #007bff; /* Highlighting the total price in Bootstrap primary color */
+        }
+    </style>
+</head>
+<body class="">
+    <div class="container">
+        <h1 class="text-center mt-4">Shoping cart</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <ul id="item-list" class="list-group mb-4">
+                    <!-- Items will be dynamically added here -->
+                </ul>
+                <div class="total text-right mb-4">
+                    <h4 class="text-center">Total Price: ₹<span id="total-price">0</span></h4>
+                </div>
+                <div class="text-center">
+                    <a id="pay-button" href="#" class="btn btn-success btn-lg">Pay Now</a>
+
+                    <script>
+                    // Assuming 'totalPrice' is calculated and available
+                    document.getElementById('pay-button').addEventListener('click', () => {
+                        const totalPrice = document.getElementById('total-price').textContent;
+                        window.location.href = `payment.html?totalPrice=${totalPrice}`;
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
